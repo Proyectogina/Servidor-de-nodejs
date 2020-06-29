@@ -9,6 +9,19 @@ app.post('/formulario', (req, res) => {
     configMensaje(req.body);
     res.status(200).send();
 })
+app.get('/promociones', (req, res) => {
+  let respuesta;
+  respuesta="No hay promociones por lo pronto :/ ";
+  res.send({resp:respuesta});
+})
+
+app.get('/hotelb', (req, res) => {
+  let respuesta;
+  respuesta="Cabañas Mazamitla";
+    res.send({resp:respuesta});
+
+})
+
 app.listen(3000, () => {
 console.log('Servidor corriendo')
 });
